@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table>
+          <tr>
+            <th>Amount</th>
+            <th>From currency</th>
+            <th>To currency</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td><input type="text" id="Amount"></td>
+            <td>
+                <select name="FromCurrency" id="FromCurrency">
+                  <option value="VND">VietNam</option>
+                  <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="ToCurrency" id="ToCurrency">
+                  <option value="VND">VietNam</option>
+                  <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="change()">convert</button>
+            </td>
+          </tr>
+        </table>
+    </form>
+    <p id="kq"></p>
+    
+</body>
+</html>
+
+<script>
+    function change(){
+        let getAmount=document.getElementById("Amount").value;
+        let getFC=document.getElementById("FromCurrency").value;
+        let getTC=document.getElementById("ToCurrency").value;
+        var kq;
+
+        var gA = parseInt(getAmount);
+
+        if(getFC==getTC){
+            kq="Vui long chon lai";
+        }
+        else if(getFC=="VND"&&getTC){
+            kq=gA*0.000042 + "$";
+        }
+        else {
+            kq=gA*23585 + "VND";
+        }
+        document.getElementById("kq").innerText="Result: " + kq;
+    }
+</script>

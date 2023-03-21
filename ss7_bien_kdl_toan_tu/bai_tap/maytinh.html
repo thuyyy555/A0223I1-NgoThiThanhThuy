@@ -4,47 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuyển Đổi Tiền Tệ</title>
+    <title>Document</title>
 </head>
-
 <body>
-<form>
-    <th>Amount</th>
-    <input type="text" name="Amount" id="number" >
-    <th> From Currency </th>
-    <select id="option 1">
-        <option value="VND">VND</option>
-        <option value="USD">USD</option>
-    </select>
-    <th> To Currency </th>
-    <select id="option 2">
-        <option value="VND">VND</option>
-        <option value="USD">USD</option>
-    </select>
-    <input type="button" onclick="change()" value="convert">
-
-</form>
-<p id="Result" style="color: blue;"></p>
-<script>
-    function change(){
-        let option1= document.getElementById("option 1").value;
-        let option2= document.getElementById("option 2").value;
-        let Amount = document.getElementById("number").value;
-        let Result;
-
-        if (option1==option2) {
-            Result=Amount
-        }
-        else if(option1=="VND" && option2=="USD")
-        {
-            Result=Amount*0.000042 + "$"
-        }
-
-        else{
-            Result=Amount*23548 + "VND"
-        }
-        document.getElementById("Result").innerText="Result:"+Result
-    }
-</script>
+    <form>
+                <input type="text" name="soa" id="number1">
+                <input type="text" name="sob" id="number2"></br>            
+                <input type="button" onclick="change1()" value="Addition(+)">
+                <input type="button" onclick="change2()" value="Subtraction(-)">
+                <input type="button" onclick="change3()" value="Multiplication(*)">
+                <input type="button" onclick="change4()" value="Division(/)">
+       
+    </form>
+    <p id="kq"></p>
 </body>
 </html>
+<script>
+    function change1(){
+
+        let getNumber1= document.getElementById("number1").value;
+        let getNumber2= document.getElementById("number2").value;
+        
+        var gN1 = parseInt(getNumber1); 
+        var gN2 = parseInt(getNumber2); 
+
+        var kq = gN1+gN2;
+
+        document.getElementById("kq").innerText="Result addition: " + kq;
+    }
+    function change2(){
+
+        let getNumber1= document.getElementById("number1").value;
+        let getNumber2= document.getElementById("number2").value;
+        
+        var gN1 = parseInt(getNumber1); 
+        var gN2 = parseInt(getNumber2); 
+        
+        var kq = gN1-gN2;
+        
+        document.getElementById("kq").innerText="Result subtraction: " + kq;
+    }
+    function change3(){
+
+       let getNumber1= document.getElementById("number1").value;
+       let getNumber2= document.getElementById("number2").value;
+       
+       var gN1 = parseInt(getNumber1); 
+       var gN2 = parseInt(getNumber2); 
+       
+       var kq = gN1*gN2;
+       
+       document.getElementById("kq").innerText="Result multiplication: " + kq;
+    }
+    function change4(){
+
+       let getNumber1= document.getElementById("number1").value;
+       let getNumber2= document.getElementById("number2").value;
+       
+       var gN1 = parseInt(getNumber1); 
+       var gN2 = parseInt(getNumber2); 
+       
+       var kq = gN1/gN2;
+       
+       document.getElementById("kq").innerText="Result division: " + kq;
+    }
+
+</script>
