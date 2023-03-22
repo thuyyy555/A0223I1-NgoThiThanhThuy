@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu lệnh Switch-case</title>
+</head>
+<body>
+    <input type="text" id="month">
+    <button onclick="change()">Tính số ngày</button>
+    <p id="kq"></p>
+</body>
+</html>
+<script>
+    function change() {
+        var Month=document.getElementById("month").value;
+        var getM=parseInt(Month);
+        switch(getM){
+            case 1: document.getElementById("kq").innerText="Tháng 1 có 31 ngày";
+            break;
+            case 2: document.getElementById("kq").innerText="Tháng 2 có 28 hoặc 29 ngày";
+            break;
+            case 3: document.getElementById("kq").innerText="Tháng 3 có 31 ngày";
+            break;
+            case 4: document.getElementById("kq").innerText="Tháng 4 có 30 ngày";
+            break;
+            case 5: document.getElementById("kq").innerText="Tháng 5 có 31 ngày";
+            break;
+            case 6: document.getElementById("kq").innerText="Tháng 6 có 30 ngày";
+            break;
+            case 7: document.getElementById("kq").innerText="Tháng 7 có 31 ngày";
+            break;
+            case 8: document.getElementById("kq").innerText="Tháng 8 có 31 ngày";
+            break;
+            case 9: document.getElementById("kq").innerText="Tháng 9 có 30 ngày";
+            break;
+            case 10: document.getElementById("kq").innerText="Tháng 10 có 31 ngày";
+            break;
+            case 11: document.getElementById("kq").innerText="Tháng 11 có 30 ngày";
+            break;
+            case 12: document.getElementById("kq").innerText="Tháng 12 có 31 ngày";
+            break;
+           
+        }
+
+    }
+
+</script>
