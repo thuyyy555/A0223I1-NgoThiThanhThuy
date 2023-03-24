@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập cấu trúc điều kiện 01-Bài 05</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var bkt=prompt("Nhap diem bai kiem tra: ");
+    var dgk=prompt("Nhap diem giua ki: ");
+    var dck=prompt("Nhap diem cuoi ki: ");
+
+    var gBkt=parseFloat(bkt);
+    var gDgk=parseFloat(dgk);
+    var gDck=parseFloat(dck);
+
+    var dtb=(gBkt*2+gDgk*3+gDck*5)/10;
+
+    if(dtb>=8) {
+        alert("Xep loai GIOI");
+    }
+    else if(dtb<8&&dtb>=7){
+        alert("Xep loai KHA");
+    }
+    else if(dtb<7&&dtb>=5){
+        alert("Xep loai TRUNG BINH");
+    }
+    else alert("Xep loai YEU");
+</script>

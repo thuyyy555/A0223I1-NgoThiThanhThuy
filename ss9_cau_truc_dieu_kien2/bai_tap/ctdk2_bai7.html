@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập cấu trúc điều kiện 02-Bài 07</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var a = prompt("Nhap a: ");
+    var b = prompt("Nhap b: ");
+    var c = prompt("Nhap c: ");
+
+    var gA=parseFloat(a);
+    var gB=parseFloat(b);
+    var gC=parseFloat(c);
+
+    var x = (gB*gB)-4*gA*gC;
+
+    if(gA==0){
+        if(gB==0&&gC==0){
+        alert("Phuong trinh co vo nghiem");
+    }
+    else if(gB==0&&gC!=0){
+        alert("Phuong trinh vo nghiem");
+    }
+    else {
+        var x = -gC/gB;
+        alert("Nghiem cua phuong trinh la: " + x);
+    }
+    }
+    else {
+        if(x<0){
+            alert("Phuong trinh vo nghiem");
+        }
+        else if(x==0){
+            var val=-gB/(2*gA);
+            alert("Phuong trinh co nghiem kep: " + val);
+        }
+        else {
+            var val1=(-gB+Math.sqrt(x))/(2*gA);
+            var val2=(-gB-Math.sqrt(x))/(2*gA);
+            alert("Phuong trinh co 2 nghiem phan biet: x1="+val1+" x2="+val2);
+        }
+    }
+</script>

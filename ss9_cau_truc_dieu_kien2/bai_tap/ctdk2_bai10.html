@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập cấu trúc điều kiện 02-Bài 10</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var sanluongdien=prompt("Nhap san luong dien");
+    var kWh=parseFloat(sanluongdien);
+    var hoaDon;
+
+    if(kWh > 0 && kWh <= 50){
+        hoaDon=kWh*1678;
+    }
+    else if(kwh > 50 && kWh <= 100){
+        hoaDon=kWh*1734;
+    }
+    else if(kwh > 101 && kWh <= 200){
+        hoaDon=kWh*2014;
+    }
+    else if(kwh > 201 && kWh <= 300){
+        hoaDon=kWh*2536;
+    }
+    else if(kwh > 301 && kWh <= 400){
+        hoaDon=kWh*2834;
+    }
+    else {
+        hoaDon=kWh*2927;
+    }
+    alert("Gia dien: "+hoaDon);
+</script>
