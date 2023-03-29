@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập vòng lặp 01 - Bài08</title>
+</head>
+
+<body>
+    <button onclick="change()">PLAY</button>
+
+</body>
+
+</html>
+<script>
+    function TaoSoNgauNhien(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function change() {
+        let first = +prompt("Nhập khoảng đầu: ");
+        let last = +prompt("Nhập khoảng cuối: ");
+        alert("Khoảng đoán số là: " + first + " - " + last);
+        let a = TaoSoNgauNhien(first, last);
+        let val = +prompt("Nhập giá trị muốn đoán: ");
+        if (a == val) {
+            alert("Chuc Mung");
+        }
+        else if (a > val) {
+            alert("Nho hon so can doan");
+        }
+        else {
+            alert("Lon hon so can doan");
+        }
+    }
+</script>
