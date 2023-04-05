@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+
+<body>
+    <label for="search">Tim kiem</label>
+    <input type="text" id="search">
+    <button type="button" onclick="search()">OK</button>
+
+</body>
+
+</html>
+<script>
+    let array1 = ["dog", "cat", "rabbit"];
+    let array2 = ["chó", "mèo", "thỏ"];
+    function search() {
+        let getInput = document.getElementById("search").value;
+        for (let i = 0; i < array1.length; i++) {
+            if (getInput == array1[i]) {
+                let result = array1.indexOf(array1[i]);
+                alert(array2[result]);
+                break;
+            }
+            else {
+                alert("Khong tim thay");
+            }
+        }
+    }
+</script>

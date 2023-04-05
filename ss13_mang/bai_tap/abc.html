@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+
+        let count = 0;
+        let array = [
+            ['A1', 1, 'cntt', 5],
+            ['B', 2, 'xh', 5],
+            ['A', 3, 3, 5],
+            ['A', 4, 'cntt', 5],
+            ['A', 6, 'cntt', 5]
+        ]
+        for (let i = 0; i < array.length; i++) {
+            let nameArray = Array[i].from(array);
+        }
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] >= '0' && array[i][j] <= '9') {
+                    count++;
+                }
+            }
+        }
+        alert(count);
+
+    </script>
+</body>
+
+</html>
+ 

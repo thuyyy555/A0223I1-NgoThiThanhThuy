@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luyện tập cấu trúc điều kiện 02-Bài 03</title>
+    <title>Luyện tập mảng 02 - Bài4</title>
 </head>
 
 <body>
@@ -14,10 +14,12 @@
 
 </html>
 <script>
-    let val = +prompt("Nhap canh: ");
-    if (val > 0) {
-        let dientich = val * val;
-        alert("Dien tich hinh vuong: " + dientich);
+    let stringA = "Hoc Lap Trinh";
+    let count = 1;
+    for (let i = 0; i < stringA.length; i++) {
+        if (stringA[i] == " ") {
+            count++
+        }
     }
-    else alert("Vui long nhap lai");
+    alert(count);
 </script>
