@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập tạo và sử dụng hàm 01-Bài5</title>
+</head>
+
+<body>
+    <script>
+        let arrayStars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arrayConstellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function search(a) {
+            for (let i = 0; i < arrayStars.length; i++) {
+                if (a == arrayStars[i]) {
+                    return arrayConstellations[i];
+                }
+            }
+            return -1;
+        }
+        let input = prompt("Nhập tên của ngôi sao: ");
+        alert(search(input));
+    </script>
+</body>
+
+</html>
