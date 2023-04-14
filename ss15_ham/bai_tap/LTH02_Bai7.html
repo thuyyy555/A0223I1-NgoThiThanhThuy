@@ -10,13 +10,23 @@
 
 <body>
     <script>
-        function swap(a, b) {
-            let c = a;
-            a = b;
-            b = c;
-            alert("a=" + a + "," + " b=" + b);
+        // function swap(a, b) {
+        //     let c = a;
+        //     a = b;
+        //     b = c;
+        //     alert("a=" + a + "," + " b=" + b);
+        // }
+        // alert(swap(2, 3));
+
+        function swap(a) {
+            let temp = a[0];
+            a[0] = a[1];
+            a[1] = temp;
+            return a;
         }
-        alert(swap(2, 3));
+        let a = [2, 4];
+        alert(swap(a));
+
     </script>
 </body>
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+
+<body>
+    <canvas id="DemoCanvas" width="500" height="600"></canvas>
+    <script>
+        class Rectangle {
+            constructor(width, length) {
+                this.width = width;
+                this.length = length;
+            }
+
+            getWidth() {
+                return width;
+            }
+            getLength() {
+                return length;
+            }
+            getPerimeter() {
+                return 2 * (this.width + this.length);
+            }
+            getArea() {
+                return this.width * this.length;
+            }
+            setWidth(width) {
+                this.width = width;
+            }
+            setLength(length) {
+                this.length = length;
+            }
+
+            createRectangle() {
+                var canvas = document.getElementById("DemoCanvas");
+                if (canvas.getContext) {
+                    var ctx = canvas.getContext('2d');
+                    ctx.fillStyle = '#fa4b2a';    // color of fill
+                    ctx.fillRect(10, 40, 140, 160); // create rectangle  
+                }
+            }
+
+        };
+
+        let rectangle = new Rectangle(2, 3);
+        rectangle.createRectangle();
+        rectangle.setWidth(4);
+        rectangle.setLength(5);
+        let perimeter = rectangle.getPerimeter();
+        let area = rectangle.getArea();
+        alert("Chu vi: " + perimeter + "; Dien tich: " + area);
+
+    </script>
+
+</body>
+
+</html>

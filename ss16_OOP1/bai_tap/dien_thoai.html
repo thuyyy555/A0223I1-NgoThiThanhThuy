@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+    <input type="text" id="getInput">
+    <button id="sendButton">SEND</button>
+    <script>
+        class Mobile{
+            constructor(battery){
+                this.battery=battery;
+            }
+            //kiem tra trang thai dien thoai
+            check(){}
+            //bat tat dien thoai
+            turn(){}
+            //sac pin
+            charge(){}
+            //soan tin nhan
+            text(){
+                let getMess = document.getElementById("getInput").value;
+            }
+            //gui tin nhan
+            sendText(a){
+                this.text();
+            }
+            //nhan tin nhan
+            getText(a){
+                this.sendText();
+                alert(getMess);
+            }
+            
+
+
+        }
+        let nokia = new Mobile(20);
+        let iphone = new Mobile(15);
+        nokia.text();
+        nokia.getText();
+    </script>
+</body>
+</html>
