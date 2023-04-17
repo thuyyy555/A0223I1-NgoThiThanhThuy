@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xây dựng lớp mô tả điện thoại</title>
 </head>
+
 <body>
     <input type="text" id="getInput">
-    <button id="sendButton">SEND</button>
+    <button onclick="send()">SEND</button>
     <script>
-        class Mobile{
-            constructor(battery){
-                this.battery=battery;
+        class Mobile {
+            constructor(battery) {
+                this.battery = battery;
+                this.text="";
             }
             //kiem tra trang thai dien thoai
-            check(){}
+            check() { }
             //bat tat dien thoai
-            turn(){}
+            turn() { }
             //sac pin
-            charge(){}
+            charge() { }
             //soan tin nhan
-            text(){
-                let getMess = document.getElementById("getInput").value;
+            writeMess() {
+                return this.text = document.getElementById("getInput").value;
             }
             //gui tin nhan
-            sendText(a){
-                this.text();
+            sendMess(iphone) {
+                // function send() {
+                //     this.writeMess();
+                //     iphone.text=this.text;
+                //     return iphone.text;
+                // }
+                // send();
+                iphone.text=this.writeMess();
+                return iphone.text;
             }
             //nhan tin nhan
-            getText(a){
-                this.sendText();
-                alert(getMess);
+            getMess() {
+                this.text=this.sendMess();
+                alert(this.text);
             }
-            
+
 
 
         }
         let nokia = new Mobile(20);
         let iphone = new Mobile(15);
-        nokia.text();
-        nokia.getText();
+        nokia.writeMess();
+        nokia.sendMess(iphone);
+        iphone.getMess();
     </script>
 </body>
+
 </html>
